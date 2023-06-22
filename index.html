@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-time Sound Player</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #F2F2F2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #FFFFFF;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+    }
+
+    .audio-controls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .volume-slider {
+      width: 200px;
+      margin-top: 20px;
+      appearance: none;
+      background-color: #F2F2F2;
+      outline: none;
+    }
+
+    .volume-slider::-webkit-slider-thumb {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background-color: #333;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .object-indicator {
+      margin-top: 30px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #DDDDDD;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .object-indicator.active {
+      background-color: #FFC0CB;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="logo.png" alt="Logo">
+    <h1>Real-time Sound Player</h1>
+    <div class="audio-controls">
+      <audio id="audio-element" controls></audio>
+      <input type="range" id="volume-range" class="volume-slider" min="0" max="1" step="0.1" value="0.5">
+    </div>
+    <div id="object-indicator" class="object-indicator"></div>
+  </div>
+
+  <script>
+    const audioElement = document.getElementById('audio-element');
+    const volumeRange = document.getElementById('volume-range');
+    const objectIndicator = document.getElementById('object-indicator');
+    let audioContext;
+    let audioSource;
+    let isObjectDetected = false;
+
+    // Change volume when the range input is adjusted
+    volumeRange.addEventListener('input', () => {
+      audioElement.volume = volumeRange.value;
+    });
+
+    // Simulate object detection event
+    setInterval(() => {
+      isObjectDetected = !isObjectDetected;
+      updateObjectIndicator();
+    }, 2000); // Adjust the interval as needed
+
+    // Update object indicator based on the object detection status
+    function updateObjectIndicator
