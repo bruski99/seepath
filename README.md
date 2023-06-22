@@ -4,6 +4,7 @@
 
 </div>
 
+https://bruski99.github.io/seepath/
 
 Welcome to the SeePath project! This project aims to assist blind individuals in navigating difficult spaces using ultrasonic sensors and a web-based interface that connects to a database. With this system, users can receive real-time alerts about obstacles in their path, enhancing their mobility and safety.
 
