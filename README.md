@@ -1,4 +1,9 @@
-# SeePath 
+<div align="center"> 
+
+  ![seepathwhtie](https://github.com/bruski99/seepath/assets/114541522/b8a32c9d-84a2-43e4-8d52-50f4219c1a96)
+
+</div>
+
 
 Welcome to the SeePath project! This project aims to assist blind individuals in navigating difficult spaces using ultrasonic sensors and a web-based interface that connects to a database. With this system, users can receive real-time alerts about obstacles in their path, enhancing their mobility and safety.
 
@@ -55,3 +60,4 @@ Contributions to this project are welcome! You can contribute by submitting bug 
 This project is licensed under the [Creative Commons Zero Universal v1.0](https://creativecommons.org/publicdomain/zero/1.0/) license. The Creative Commons Zero license allows you to dedicate your work to the public domain, meaning that others can freely use, modify, and distribute your project without any restrictions. By choosing this license, you ensure maximum freedom for the users of your project and promote open collaboration.
 
 Please note that this license only applies to the project itself and not necessarily to any third-party libraries or components used in the project. Make sure to review and comply with the licenses of any external dependencies.
+
